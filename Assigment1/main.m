@@ -74,12 +74,22 @@ title("midtread");
 xlabel('input');
 ylabel('output');
 
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %4.Test your input on a random input signal 
-% 
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Requirement(4)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%4.Test your input on a random input signal 
+random=unifrnd(-5,5,10000);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+n_bits=2:1:8;
+SNR=2:1:8;%initalization
+% On the same plot. sketch the simulation and the theoretical SNR (in dB) 
+% on the vertical axis vs n_bits on the horizontal axis.
+for i=1:length(n_bits)
+    SNR(i) = SNRfunc(random,n_bits(i),5,0);
+end
+%Sketch (Convert to DB)
+%%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %5.Test the uniform quantizer on a non-uniform random input
 % 
 % 
